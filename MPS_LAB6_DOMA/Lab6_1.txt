@@ -1,0 +1,88 @@
+
+unsigned int tmp;
+unsigned int broj;
+int obidi;
+Keypad_Init();
+char keypadPort at PORTD;
+sbit LCD_RS at RB4_bit;
+sbit LCD_EN at RB5_bit;
+sbit LCD_D4 at RB0_bit;
+sbit LCD_D5 at RB1_bit;
+sbit LCD_D6 at RB2_bit;
+sbit LCD_D7 at RB3_bit;
+sbit LCD_RS_Direction at TRISB4_bit;
+sbit LCD_EN_Direction at TRISB5_bit;
+sbit LCD_D4_Direction at TRISB0_bit;
+sbit LCD_D5_Direction at TRISB1_bit;
+sbit LCD_D6_Direction at TRISB2_bit;
+sbit LCD_D7_Direction at TRISB3_bit;
+char txt[30];
+char kp;
+void main() {
+    ANSEL=0x04;
+     ANSELH=0;
+     TRISA=0xFF;
+     obidi =3;
+      Keypad_Init();
+     Lcd_Init();
+      EEPROM_Write(0x00,27);
+ Lcd_Cmd(_LCD_CLEAR);
+Lcd_Cmd(_LCD_CURSOR_OFF);
+
+ Lcd_Out(1, 1, "Vnesi cifra");
+   do
+    {
+   tmp=ADC_Read(2);
+}
+while (1);
+   do {
+   
+   do {
+   kp=0;
+   
+
+ Lcd_Cmd(_LCD_CLEAR);
+Lcd_Cmd(_LCD_CURSOR_OFF);
+  Lcd_Out(1, 1, "Vnesi cifra");
+   do    {
+   kp=Keypad_Key_Click();   }
+   while(!kp);
+   switch (kp)
+   {
+   case 1: broj=broj*10+1; break; //1
+   case 2: broj = broj*10 + 4; break;//4
+   case 3: broj =broj*10+7;break; //7
+   case 4: break; //*
+   case 5: broj= broj*10+2; break; //  2
+   case 6:broj = broj *10+5; break; // 5
+   case 7:broj= broj *10+8; break; // 8
+   case 8: break; //0
+   case 9:  broj= broj*10+3; break; //  3
+   case 10: broj= broj*10+6; break; // 6
+   case 11:  broj= broj*10+9; break; // 9
+   case 12: kp ='#' ; break; //#
+   case 13: break;  //A
+   case 14: break;//B
+   case 15: break;   //C
+   case 16: break;      //D
+   }
+   }
+   while (kp!='#');
+  // WordToStr(broj, txt);
+  //Lcd_Out(2, 10, txt);
+
+
+if(broj==tmp){
+    Lcd_Cmd(_LCD_CLEAR);
+  Lcd_Cmd(_LCD_CURSOR_OFF);
+       Lcd_Out(1, 1, "Tochna Shifra!");
+   }
+   else  {
+  Lcd_Cmd(_LCD_CLEAR);
+  Lcd_Cmd(_LCD_CURSOR_OFF);
+       Lcd_Out(1, 1, "Netochna Shifra!");
+   }
+   obidi = obidi-1;
+   
+   while (obidi<1);
+}
