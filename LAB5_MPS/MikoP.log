@@ -1,0 +1,24 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"C:\Users\Nacev\Desktop\V Semestar\Mikroprocesorski sistemi\Laboratoriski\Lab5_MPS\MikoP.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\Nacev\Desktop\V Semestar\Mikroprocesorski sistemi\Laboratoriski\Lab5_MPS\" -SP"C:\working\Micro\mikroC PRO for PIC\defs\" -SP"C:\working\Micro\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\141142\Downloads\" -SP"C:\Users\Nacev\Desktop\V Semestar\Mikroprocesorski sistemi\Laboratoriski\Lab5_MPS\" -SP"C:\Users\Nacev\Desktop\MPS_LAB6\" "MikoP.c" "Pod_Primer1.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_Time.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Keypad4x4.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_88X.mcl" "__Lib_EEPROM.mcl" "__Lib_FLASH_RW.mcl" "__Lib_I2C_c34.mcl" "__Lib_PWM_c21.mcl" "__Lib_SPI_c345.mcl" "__Lib_UART_c67.mcl" "__Lib_PortExpander.mcl" "__Lib_CANSPI.mcl" "__Lib_CF.mcl" "__Lib_GlcdFonts.mcl" "__Lib_Glcd.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_RS485.mcl" "__Lib_T6963C.mcl" "__Lib_SPIGlcd.mcl" "__Lib_SPILcd.mcl" "__Lib_SPILcd8.mcl" "__Lib_SPIT6963C.mcl" "__Lib_EthEnc28j60.mcl" "__Lib_EthEnc24j600.mcl" "__Lib_TouchPanel.mcl"	 
+warning: 0	1501	Specified search path does not exist: 'C:\working\Micro\mikroC PRO for PIC\defs'	 
+warning: 0	1501	Specified search path does not exist: 'C:\working\Micro\mikroC PRO for PIC\Uses\P16'	 
+warning: 0	1501	Specified search path does not exist: 'C:\Users\141142\Downloads'	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	MikoP.c
+diagnostics: 93	123	Compiled Successfully	MikoP.c
+diagnostics: 0	122	Compilation Started	Pod_Primer1.c
+diagnostics: 77	123	Compiled Successfully	Pod_Primer1.c
+diagnostics: 0	127	All files Compiled in 47 ms	 
+error: 4	355	Redefinition of 'LCD_RS [Pod_Primer1.c] '. 'LCD_RS' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 5	355	Redefinition of 'LCD_EN [Pod_Primer1.c] '. 'LCD_EN' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 6	355	Redefinition of 'LCD_D4 [Pod_Primer1.c] '. 'LCD_D4' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 7	355	Redefinition of 'LCD_D5 [Pod_Primer1.c] '. 'LCD_D5' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 8	355	Redefinition of 'LCD_D6 [Pod_Primer1.c] '. 'LCD_D6' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 9	355	Redefinition of 'LCD_D7 [Pod_Primer1.c] '. 'LCD_D7' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 10	355	Redefinition of 'LCD_RS_Direction [Pod_Primer1.c] '. 'LCD_RS_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 11	355	Redefinition of 'LCD_EN_Direction [Pod_Primer1.c] '. 'LCD_EN_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 12	355	Redefinition of 'LCD_D4_Direction [Pod_Primer1.c] '. 'LCD_D4_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 13	355	Redefinition of 'LCD_D5_Direction [Pod_Primer1.c] '. 'LCD_D5_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 14	355	Redefinition of 'LCD_D6_Direction [Pod_Primer1.c] '. 'LCD_D6_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 15	355	Redefinition of 'LCD_D7_Direction [Pod_Primer1.c] '. 'LCD_D7_Direction' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 19	355	Redefinition of 'main [Pod_Primer1.c] '. 'main' already defined in 'MikoP.c'	Pod_Primer1.c
+error: 0	102	Finished (with errors): 08 Dec 2016, 14:13:42	MikoP.mcppi
