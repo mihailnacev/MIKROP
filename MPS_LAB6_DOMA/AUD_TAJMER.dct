@@ -283,6 +283,7 @@ brg9
 brg9_bit
 brgh
 brgh_bit
+bukvi
 button
 byte2double
 bytetohex
@@ -411,6 +412,7 @@ ckp_bit
 cm1con0
 cm2con0
 cm2con1
+cnt
 comfrem
 compare_double
 cos
@@ -576,6 +578,7 @@ go_not_done_bit
 halfbits
 hts
 hts_bit
+i
 i2c_data
 i2c_data_bit
 i2c_read
@@ -600,6 +603,7 @@ inte
 inte_bit
 intedg
 intedg_bit
+interrupt
 intf
 intf_bit
 inttohex
@@ -816,6 +820,7 @@ portd
 porte
 pow
 pr2
+print
 prsen
 prsen_bit
 ps0
@@ -1073,6 +1078,7 @@ setfun32
 setiov3224
 shorttohex
 shorttostr
+sifra
 sin
 sine3
 sinh
@@ -1324,6 +1330,7 @@ strsync
 strsync_bit
 strtok
 sub_32x32_fp
+suma
 swap
 swdten
 swdten_bit
@@ -1398,7 +1405,7 @@ t6963c_writecommand
 t6963c_writedata
 tan
 tanh
-text
+tel
 time_datetoepoch
 time_epochtodate
 time_jd1970
