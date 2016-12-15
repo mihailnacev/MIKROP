@@ -29,10 +29,10 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=3
-Path0=C:\working\Micro\mikroC PRO for PIC\defs\
-Path1=C:\working\Micro\mikroC PRO for PIC\Uses\P16\
-Path2=C:\Users\141142\Downloads\
+Count=6
+Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\
+Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\
+Path2=C:\Users\Nacev\Desktop\MIKROP\MPS_LAB6_DOMA\
 [HEADER_PATH]
 Count=0
 [HEADERS]
@@ -82,6 +82,9 @@ File37=Time
 File38=TouchPanel
 File39=Trigonometry
 File40=UART
-[EXPANDED NODES]
-Node1=Sources
-Count=1
+[USE_HEAP]
+Value=0
+[HEAP_SIZE]
+Value=0
+[EXPANDED_NODES]
+Count=0

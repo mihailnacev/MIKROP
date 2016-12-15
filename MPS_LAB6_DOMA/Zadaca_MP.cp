@@ -1,4 +1,4 @@
-#line 1 "C:/Users/141142/Downloads/Zadaca_MP.c"
+#line 1 "C:/Users/Nacev/Desktop/MIKROP/MPS_LAB6_DOMA/Zadaca_MP.c"
 sbit LCD_RS at RB4_bit;
 sbit LCD_EN at RB5_bit;
 sbit LCD_D4 at RB0_bit;
@@ -92,9 +92,9 @@ do{
  brojP=0;
  }
 }
-#line 99 "C:/Users/141142/Downloads/Zadaca_MP.c"
+#line 99 "C:/Users/Nacev/Desktop/MIKROP/MPS_LAB6_DOMA/Zadaca_MP.c"
 Lcd_Cmd(_LCD_CURSOR_OFF);
 Lcd_Cmd(_LCD_CLEAR);
 Lcd_Out(1,1,"Kraj");
-#line 112 "C:/Users/141142/Downloads/Zadaca_MP.c"
+#line 112 "C:/Users/Nacev/Desktop/MIKROP/MPS_LAB6_DOMA/Zadaca_MP.c"
 }

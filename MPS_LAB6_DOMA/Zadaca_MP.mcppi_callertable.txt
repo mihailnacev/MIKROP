@@ -16,7 +16,7 @@ main
 		Keypad_Key_Press
 			Delay_1us
 		Delay_10us
-	Mul_16x16_U
+	Mul_16X16_U
 	Lcd_Out
 		Lcd_Cmd
 			Delay_1us
@@ -29,5 +29,5 @@ main
 				Delay_50us
 	IntToStr
 		WordToStr
-			Div_16x16_U
+			Div_16X16_U
 	Ltrim

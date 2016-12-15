@@ -15,10 +15,10 @@ L_main0:
 	MOVLW      0
 	XORWF      _m+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main33
+	GOTO       L__main34
 	MOVLW      0
 	XORWF      _m+0, 0
-L__main33:
+L__main34:
 	BTFSS      STATUS+0, 2
 	GOTO       L_main1
 ;Zadaca_MP.c,33 :: 		m = ADC_Read(0);
@@ -36,10 +36,10 @@ L_main2:
 	MOVLW      0
 	XORWF      _broj+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main34
+	GOTO       L__main35
 	MOVLW      0
 	XORWF      _broj+0, 0
-L__main34:
+L__main35:
 	BTFSS      STATUS+0, 2
 	GOTO       L_main3
 ;Zadaca_MP.c,36 :: 		broj = ADC_Read(1);
@@ -91,10 +91,10 @@ L_main4:
 	XORWF      _m+1, 0
 	SUBWF      R0+0, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main35
+	GOTO       L__main36
 	MOVF       _m+0, 0
 	SUBWF      _i+0, 0
-L__main35:
+L__main36:
 	BTFSC      STATUS+0, 0
 	GOTO       L_main5
 ;Zadaca_MP.c,49 :: 		do{
@@ -121,7 +121,7 @@ L_main15:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVF       R0+0, 0
 	ADDLW      1
 	MOVWF      _brojP+0
@@ -141,7 +141,7 @@ L_main16:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      2
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -160,7 +160,7 @@ L_main17:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      3
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -182,7 +182,7 @@ L_main19:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      4
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -201,7 +201,7 @@ L_main20:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      5
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -220,7 +220,7 @@ L_main21:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      6
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -242,7 +242,7 @@ L_main23:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      7
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -261,7 +261,7 @@ L_main24:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      8
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -280,7 +280,7 @@ L_main25:
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
-	CALL       _Mul_16x16_U+0
+	CALL       _Mul_16X16_U+0
 	MOVLW      9
 	ADDWF      R0+0, 0
 	MOVWF      _brojP+0
@@ -382,10 +382,10 @@ L_main14:
 	MOVF       _brojP+1, 0
 	XORWF      _broj+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main36
+	GOTO       L__main37
 	MOVF       _broj+0, 0
 	XORWF      _brojP+0, 0
-L__main36:
+L__main37:
 	BTFSS      STATUS+0, 2
 	GOTO       L_main31
 ;Zadaca_MP.c,74 :: 		Lcd_Cmd(_LCD_CURSOR_OFF);
@@ -508,5 +508,6 @@ L_main5:
 	MOVWF      FARG_Lcd_Out_text+0
 	CALL       _Lcd_Out+0
 ;Zadaca_MP.c,112 :: 		}
+L_end_main:
 	GOTO       $+0
 ; end of _main
