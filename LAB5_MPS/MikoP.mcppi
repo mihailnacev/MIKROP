@@ -16,7 +16,7 @@ Value=0
 [HEAP_SIZE]
 Value=0
 [FILES]
-Count=2
+Count=1
 File0=MikoP.c
 [BINARIES]
 Count=0
@@ -33,7 +33,7 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=6
+Count=4
 Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\
 Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\
 Path2=C:\Users\Nacev\Desktop\MIKROP\LAB5_MPS\

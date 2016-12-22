@@ -25,7 +25,7 @@ int flag=0;
 char cifra[16];
 
 void interrupt(){
-if(INTCON.INTF && flag == 0){
+if(INTCON.INTF){
 brojac++;
 TMR0=6;
 cnt1 = 0;

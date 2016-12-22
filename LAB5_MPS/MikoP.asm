@@ -9,19 +9,9 @@ _interrupt:
 	CLRF       PCLATH+0
 
 ;MikoP.c,26 :: 		void interrupt(){
-;MikoP.c,27 :: 		if(INTCON.INTF && flag == 0){
+;MikoP.c,27 :: 		if(INTCON.INTF){
 	BTFSS      INTCON+0, 1
-	GOTO       L_interrupt2
-	MOVLW      0
-	XORWF      _flag+1, 0
-	BTFSS      STATUS+0, 2
-	GOTO       L__interrupt18
-	MOVLW      0
-	XORWF      _flag+0, 0
-L__interrupt18:
-	BTFSS      STATUS+0, 2
-	GOTO       L_interrupt2
-L__interrupt15:
+	GOTO       L_interrupt0
 ;MikoP.c,28 :: 		brojac++;
 	INCF       _brojac+0, 1
 	BTFSC      STATUS+0, 2
@@ -36,43 +26,43 @@ L__interrupt15:
 	CLRF       _cnt2+0
 	CLRF       _cnt2+1
 ;MikoP.c,32 :: 		}
-	GOTO       L_interrupt3
-L_interrupt2:
+	GOTO       L_interrupt1
+L_interrupt0:
 ;MikoP.c,34 :: 		else if(INTCON.T0IF){
 	BTFSS      INTCON+0, 2
-	GOTO       L_interrupt4
+	GOTO       L_interrupt2
 ;MikoP.c,35 :: 		if(flag==0) cnt1++;
 	MOVLW      0
 	XORWF      _flag+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__interrupt19
+	GOTO       L__interrupt15
 	MOVLW      0
 	XORWF      _flag+0, 0
-L__interrupt19:
+L__interrupt15:
 	BTFSS      STATUS+0, 2
-	GOTO       L_interrupt5
+	GOTO       L_interrupt3
 	INCF       _cnt1+0, 1
 	BTFSC      STATUS+0, 2
 	INCF       _cnt1+1, 1
-	GOTO       L_interrupt6
-L_interrupt5:
+	GOTO       L_interrupt4
+L_interrupt3:
 ;MikoP.c,36 :: 		else cnt2++;
 	INCF       _cnt2+0, 1
 	BTFSC      STATUS+0, 2
 	INCF       _cnt2+1, 1
-L_interrupt6:
+L_interrupt4:
 ;MikoP.c,37 :: 		TMR0=6;
 	MOVLW      6
 	MOVWF      TMR0+0
 ;MikoP.c,38 :: 		}
-L_interrupt4:
-L_interrupt3:
+L_interrupt2:
+L_interrupt1:
 ;MikoP.c,39 :: 		INTCON=0xA8;
 	MOVLW      168
 	MOVWF      INTCON+0
 ;MikoP.c,40 :: 		}
 L_end_interrupt:
-L__interrupt17:
+L__interrupt14:
 	MOVF       ___savePCLATH+0, 0
 	MOVWF      PCLATH+0
 	SWAPF      ___saveSTATUS+0, 0
@@ -154,27 +144,27 @@ _main:
 	MOVWF      FARG_Lcd_Out_text+0
 	CALL       _Lcd_Out+0
 ;MikoP.c,61 :: 		do {
-L_main7:
+L_main5:
 ;MikoP.c,62 :: 		if(flag==0){
 	MOVLW      0
 	XORWF      _flag+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main21
+	GOTO       L__main17
 	MOVLW      0
 	XORWF      _flag+0, 0
-L__main21:
+L__main17:
 	BTFSS      STATUS+0, 2
-	GOTO       L_main10
+	GOTO       L_main8
 ;MikoP.c,64 :: 		if(cnt1 == 0){
 	MOVLW      0
 	XORWF      _cnt1+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main22
+	GOTO       L__main18
 	MOVLW      0
 	XORWF      _cnt1+0, 0
-L__main22:
+L__main18:
 	BTFSS      STATUS+0, 2
-	GOTO       L_main11
+	GOTO       L_main9
 ;MikoP.c,65 :: 		Lcd_Cmd(_LCD_CURSOR_OFF);
 	MOVLW      12
 	MOVWF      FARG_Lcd_Cmd_out_char+0
@@ -214,17 +204,17 @@ L__main22:
 	MOVWF      FARG_Lcd_Out_text+0
 	CALL       _Lcd_Out+0
 ;MikoP.c,71 :: 		}
-L_main11:
+L_main9:
 ;MikoP.c,73 :: 		if (cnt1>=3) {
 	MOVLW      0
 	SUBWF      _cnt1+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main23
+	GOTO       L__main19
 	MOVLW      3
 	SUBWF      _cnt1+0, 0
-L__main23:
+L__main19:
 	BTFSS      STATUS+0, 0
-	GOTO       L_main12
+	GOTO       L_main10
 ;MikoP.c,74 :: 		cnt1 = 0;
 	CLRF       _cnt1+0
 	CLRF       _cnt1+1
@@ -250,29 +240,29 @@ L__main23:
 	MOVLW      0
 	MOVWF      _flag+1
 ;MikoP.c,79 :: 		}
-L_main12:
-;MikoP.c,81 :: 		}
 L_main10:
+;MikoP.c,81 :: 		}
+L_main8:
 ;MikoP.c,83 :: 		if(flag==1){
 	MOVLW      0
 	XORWF      _flag+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main24
+	GOTO       L__main20
 	MOVLW      1
 	XORWF      _flag+0, 0
-L__main24:
+L__main20:
 	BTFSS      STATUS+0, 2
-	GOTO       L_main13
+	GOTO       L_main11
 ;MikoP.c,85 :: 		if (cnt2>=6) {
 	MOVLW      0
 	SUBWF      _cnt2+1, 0
 	BTFSS      STATUS+0, 2
-	GOTO       L__main25
+	GOTO       L__main21
 	MOVLW      6
 	SUBWF      _cnt2+0, 0
-L__main25:
+L__main21:
 	BTFSS      STATUS+0, 0
-	GOTO       L_main14
+	GOTO       L_main12
 ;MikoP.c,86 :: 		Lcd_Cmd(_LCD_CURSOR_OFF);
 	MOVLW      12
 	MOVWF      FARG_Lcd_Cmd_out_char+0
@@ -282,14 +272,14 @@ L__main25:
 	MOVWF      FARG_Lcd_Cmd_out_char+0
 	CALL       _Lcd_Cmd+0
 ;MikoP.c,88 :: 		break;
-	GOTO       L_main8
+	GOTO       L_main6
 ;MikoP.c,89 :: 		}
-L_main14:
+L_main12:
 ;MikoP.c,91 :: 		}
-L_main13:
+L_main11:
 ;MikoP.c,92 :: 		} while(1);
-	GOTO       L_main7
-L_main8:
+	GOTO       L_main5
+L_main6:
 ;MikoP.c,93 :: 		}
 L_end_main:
 	GOTO       $+0
