@@ -283,6 +283,7 @@ brg9
 brg9_bit
 brgh
 brgh_bit
+broi
 brzborovi
 button
 byte2double
@@ -464,6 +465,7 @@ div_32x32_s
 div_32x32_u
 div_8x8_s
 div_8x8_u
+dolzina
 double2byte
 double2int
 double2longint
@@ -516,6 +518,7 @@ fabs
 ferr
 ferr_bit
 fixsign32
+flag
 flash_read
 flash_write
 floattostr
@@ -643,9 +646,11 @@ isspace
 isupper
 isxdigit
 j
+k
 keypad_init
 keypad_key_click
 keypad_key_press
+l
 labs
 lcd_chr
 lcd_chr_cp
@@ -691,6 +696,7 @@ man_synchro
 manchester_0
 manchester_1
 manchester_out
+matrica
 max
 mc1out
 mc1out_bit
@@ -810,6 +816,8 @@ pie1
 pie2
 pir1
 pir2
+poj
+pojavuvanja
 porta
 portb
 portc
@@ -851,6 +859,7 @@ pwm2_init
 pwm2_set_duty
 pwm2_start
 pwm2_stop
+q
 r
 r_bit
 r_not_w
@@ -1074,6 +1083,7 @@ setfun32
 setiov3224
 shorttohex
 shorttostr
+sifra
 sin
 sine3
 sinh
@@ -1313,7 +1323,6 @@ strcpy
 strcspn
 strd
 strd_bit
-strings
 strlen
 strncat
 strncmp
@@ -1400,6 +1409,8 @@ t6963c_writecommand
 t6963c_writedata
 tan
 tanh
+tekoven
+text
 time_datetoepoch
 time_epochtodate
 time_jd1970
@@ -1634,4 +1645,3 @@ wue_bit
 xtoi
 z
 z_bit
-zbor

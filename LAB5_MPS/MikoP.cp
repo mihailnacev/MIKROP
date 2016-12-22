@@ -1,4 +1,4 @@
-#line 1 "C:/Users/Nacev/Desktop/V Semestar/Mikroprocesorski sistemi/Laboratoriski/Lab5_MPS/MikoP.c"
+#line 1 "C:/Users/Nacev/Desktop/MIKROP/LAB5_MPS/MikoP.c"
 sbit LCD_RS at RA4_bit;
 sbit LCD_EN at RA5_bit;
 sbit LCD_D4 at RA0_bit;
@@ -25,7 +25,7 @@ int flag=0;
 char cifra[16];
 
 void interrupt(){
-if(INTCON.RBIE && INTCON.INTF && flag == 0){
+if(INTCON.INTF && flag == 0){
 brojac++;
 TMR0=6;
 cnt1 = 0;
@@ -48,7 +48,7 @@ text1="Tekoven broj:";
 text2="NeRaboti";
 OPTION_REG=0x86;
 TMR0=6;
-INTCON=0xA8;
+INTCON=0b10110000;
 cnt1=0;
 cnt2=0;
 Lcd_Init();

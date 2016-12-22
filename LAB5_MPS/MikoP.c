@@ -24,7 +24,7 @@ int flag=0;
 char cifra[16];
 
 void interrupt(){
-if(INTCON.RBIE && INTCON.INTF && flag == 0){
+if(INTCON.INTF && flag == 0){
 brojac++;
 TMR0=6;
 cnt1 = 0;
@@ -47,7 +47,7 @@ text1="Tekoven broj:";
 text2="NeRaboti";
 OPTION_REG=0x86;
 TMR0=6;
-INTCON=0xA8;
+INTCON=0b10110000;
 cnt1=0;
 cnt2=0;
 Lcd_Init();

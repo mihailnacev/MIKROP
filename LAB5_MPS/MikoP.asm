@@ -9,9 +9,7 @@ _interrupt:
 	CLRF       PCLATH+0
 
 ;MikoP.c,26 :: 		void interrupt(){
-;MikoP.c,27 :: 		if(INTCON.RBIE && INTCON.INTF && flag == 0){
-	BTFSS      INTCON+0, 3
-	GOTO       L_interrupt2
+;MikoP.c,27 :: 		if(INTCON.INTF && flag == 0){
 	BTFSS      INTCON+0, 1
 	GOTO       L_interrupt2
 	MOVLW      0
@@ -106,8 +104,8 @@ _main:
 ;MikoP.c,49 :: 		TMR0=6;
 	MOVLW      6
 	MOVWF      TMR0+0
-;MikoP.c,50 :: 		INTCON=0xA8;
-	MOVLW      168
+;MikoP.c,50 :: 		INTCON=0b10110000;
+	MOVLW      176
 	MOVWF      INTCON+0
 ;MikoP.c,51 :: 		cnt1=0;
 	CLRF       _cnt1+0

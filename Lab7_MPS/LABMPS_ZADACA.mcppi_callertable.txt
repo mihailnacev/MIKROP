@@ -1,6 +1,10 @@
 main
 	__CC2DW
 		____DoICP
+	UART1_Init
+	UART1_Data_Ready
+	UART1_Read
+	Mul_16X16_U
 	Lcd_Init
 		Delay_5500us
 		Delay_1us
@@ -8,13 +12,15 @@ main
 		Delay_1us
 		Delay_5500us
 		Delay_50us
-	UART1_Init
-	UART1_Data_Ready
-	UART1_Read
-	isalpha
-		islower
-		isupper
-	Mul_16X16_U
+	Lcd_Chr
+		Lcd_Cmd
+			Delay_1us
+			Delay_5500us
+			Delay_50us
+	IntToStr
+		WordToStr
+			Div_16X16_U
+	Ltrim
 	Lcd_Out
 		Lcd_Cmd
 			Delay_1us
@@ -25,8 +31,3 @@ main
 				Delay_1us
 				Delay_5500us
 				Delay_50us
-	Lcd_Chr
-		Lcd_Cmd
-			Delay_1us
-			Delay_5500us
-			Delay_50us
